@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <!-- ===========================================
+       META DE BASE & SEO
+       =========================================== -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#faf7f2">
+
+  <!-- ===========================================
+       ANTI-FLASH du thème — OBLIGATOIRE
+       Script inline, bloquant, avant tout CSS
+       =========================================== -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('lenox-theme');
+        if (t === 'dark' || t === 'light') document.documentElement.dataset.theme = t;
+        else document.documentElement.dataset.theme = 'light';
+      } catch (e) { document.documentElement.dataset.theme = 'light'; }
+    })();
+  </script>
+
+  <!-- ===========================================
+       POLICES — Fraunces (display) & Manrope (texte)
+       Préconnexion + Google Fonts
+       =========================================== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- ===========================================================
+       CSS — Un seul lien (concaténé en prod)
+       =========================================================== -->
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/sections.css">
+
+  <!-- ===========================================
+       TITRE & META DESCRIPTION — i18n
+       =========================================== -->
+  <title data-i18n="meta.title">Lenox Restaurant-Bar Gitega | Salle de réception 800 places, restaurant et bar</title>
+  <meta name="description" content="Restaurant, bar et salle de réception de 800 places à Gitega, quartier NYABIHARAGE. Cuisine africaine et internationale, animations live, parking 50 places, sécurité 24h/24." data-i18n-attr="content:meta.description">
+
+  <!-- ===========================================
+       OPEN GRAPH & TWITTER CARD
+       =========================================== -->
+  <meta property="og:title" content="Lenox Restaurant-Bar Gitega | Salle de réception 800 places">
+  <meta property="og:description" content="Restaurant, bar et salle de réception de 800 places à Gitega. Cuisine africaine, animations live, parking 50 places, sécurité 24h/24.">
+  <meta property="og:type" content="restaurant">
+  <meta property="og:url" content="https://lenoxgitega.com/">
+  <meta property="og:image" content="images/reception-hall-decor-1.jpeg">
+  <meta property="og:image:alt" content="Vue de la salle de réception de Lenox">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Lenox Restaurant-Bar Gitega | Salle de réception 800 places">
+  <meta name="twitter:description" content="Restaurant, bar et salle de réception de 800 places à Gitega.">
+  <meta name="twitter:image" content="images/reception-hall-decor-1.jpeg">
+
+  <!-- ===========================================
+       HREFLANG — SEO multilingue (§5.6)
+       =========================================== -->
+  <link rel="alternate" hreflang="fr" href="https://lenoxgitega.com/?lang=fr">
+  <link rel="alternate" hreflang="rn" href="https://lenoxgitega.com/?lang=rn">
+  <link rel="alternate" hreflang="en" href="https://lenoxgitega.com/?lang=en">
+  <link rel="alternate" hreflang="x-default" href="https://lenoxgitega.com/">
+
+  <!-- ===========================================
+       FAVICON & MANIFEST
+       =========================================== -->
+  <link rel="icon" type="image/png" sizes="192x192" href="images/lenox-logo.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="images/lenox-logo.png">
+  <link rel="apple-touch-icon" href="images/lenox-logo.png">
+
+  <!-- ===========================================
+       JSON-LD Restaurant Schema
+       =========================================== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Lenox Restaurant-Bar",
+    "image": "images/reception-hall-decor-1.jpeg",
+    "url": "https://lenoxgitega.com/",
+    "telephone": "+25722405164",
+    "email": "lenoxgitega@gmail.com",
+    "servesCuisine": ["African", "International"],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Quartier NYABIHARAGE, RN16",
+      "addressLocality": "Gitega",
+      "addressCountry": "BI"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "-3.4264",
+      "longitude": "29.9306"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "opens": "07:00",
+      "closes": "23:00"
+    },
+    "amenityFeature": [
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Parking",
+        "value": true
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Wi-Fi gratuit",
+        "value": true
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Salle de réception 800 places",
+        "value": true
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Musique live",
+        "value": true
+      }
+    ]
+  }
+  </script>
+
+  <!-- ===========================================
+       SITEMAP & ROBOTS
+       =========================================== -->
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+</head>
+<body>
+  <!-- Lien d'accès au contenu principal (premier élément focusable) -->
+  <a href="#main" class="visually-hidden focus-visible" data-i18n="a11y.skip_to_content">Aller au contenu</a>
+
+  <!-- ===========================================
+       HEADER — Structure de navigation
+       =========================================== -->
+  <header class="site-header" role="banner">
+    <div class="header-container">
+      <!-- Logo / Marque -->
+      <a href="#home" class="logo" aria-label="Lenox Restaurant-Bar'accueil">
+        <img src="images/lenox-logo.png" alt="Lenox Restaurant-Bar" width="100" height="100" loading="eager">
+      </a>
+
+      <!-- Navigation principale -->
+      <nav class="main-nav" role="navigation" aria-label="Navigation principale">
+        <ul class="nav-list">
+          <li><a href="#home" data-i18n="nav.home">Accueil</a></li>
+          <li><a href="#about" data-i18n="nav.about">À propos</a></li>
+          <li><a href="#services" data-i18n="nav.services">Services</a></li>
+          <li><a href="#menu" data-i18n="nav.menu">La carte</a></li>
+          <li><a href="#events" data-i18n="nav.events">Événements</a></li>
+          <li><a href="#gallery" data-i18n="nav.gallery">Galerie</a></li>
+          <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Langue : séparée de la navigation -->
+      <div class="header-lang">
+        <span class="lang-label" data-i18n="a11y.select_language">Langue :</span>
+        <div class="lang-selector">
+          <button id="lang-toggle" class="lang-toggle" popovertarget="lang-menu" aria-haspopup="true" data-i18n-attr="aria-label:a11y.select_language">
+            <span class="lang-current" id="lang-current">FR</span>
+            <svg class="lang-caret" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="m6 9 6 6 6-6"></path>
+            </svg>
+          </button>
+          <div id="lang-menu" class="lang-menu" popover role="menu">
+            <button class="lang-option" role="menuitem" data-lang="fr" aria-current="true">
+              <span class="lang-pip" aria-hidden="true"></span>
+              <span class="lang-name">Français</span>
+              <span class="lang-code">FR</span>
+            </button>
+            <button class="lang-option" role="menuitem" data-lang="rn">
+              <span class="lang-pip" aria-hidden="true"></span>
+              <span class="lang-name">Ikirundi</span>
+              <span class="lang-code">RN</span>
+            </button>
+            <button class="lang-option" role="menuitem" data-lang="en">
+              <span class="lang-pip" aria-hidden="true"></span>
+              <span class="lang-name">English</span>
+              <span class="lang-code">EN</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Actions : thème, CTA -->
+      <div class="header-actions">
+        <!-- Skip link pour aller directement au contenu principal -->
+        <a href="#main" class="skip-link-visually" aria-label="Aller au contenu">Aller au contenu</a>
+
+        <!-- Bouton de thème — Deux icônes superposées pour fondu croisé animé -->
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Changer de thème" aria-pressed="false" data-i18n-attr="aria-label:a11y.toggle_theme">
+          <span class="theme-toggle-icons" aria-hidden="true">
+            <!-- Icône Soleil (visible en thème clair) -->
+            <svg class="theme-icon theme-icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2"></path>
+              <path d="M12 20v2"></path>
+              <path d="m4.93 4.93 1.41 1.41"></path>
+              <path d="m17.66 17.66 1.41 1.41"></path>
+              <path d="M2 12h2"></path>
+              <path d="M20 12h2"></path>
+              <path d="m6.34 17.66-1.41 1.41"></path>
+              <path d="m19.07 4.93-1.41 1.41"></path>
+            </svg>
+            <!-- Icône Lune (visible en thème sombre) -->
+            <svg class="theme-icon theme-icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </span>
+          <span class="visually-hidden" id="theme-label" data-i18n="a11y.toggle_theme">Changer de thème</span>
+        </button>
+
+        <!-- CTA principal -->
+        <a href="#contact" class="btn btn-cta" id="book-button" data-i18n="nav.book">Réserver</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===========================================
+       MAIN — Contenu principal
+       =========================================== -->
+  <main id="main">
+
+    <!-- ===========================================
+         HERO SECTION
+         Image de fond : salle de réception dressée (fetchpriority high)
+         Voile dégradé bas-haut pour lisibilité (§7.2)
+         =========================================== -->
+    <section id="home" class="hero" aria-labelledby="hero-title">
+      <!-- Image de fond avec preload pour LCP -->
+      <picture class="hero-bg" aria-hidden="true">
+                <source type="image/jpeg" srcset="images/reception-hall-decor-1.jpeg" fetchpriority="high">
+        <img src="images/reception-hall-decor-1.jpeg" alt="" width="1920" height="1080" loading="eager" decoding="async">
+      </picture>
+
+      <div class="hero-content">
+        <span class="hero-eyebrow" data-i18n="hero.eyebrow">Gitega · Quartier NYABIHARAGE · Depuis 20XX</span>
+        <h1 id="hero-title" class="hero-title" data-i18n="hero.title">La table et la salle qui font les grands jours de Gitega</h1>
+        <p class="hero-lead" data-i18n="hero.lead">Un lieu convivial pour vos événements et vos cérémonies. Cuisine savoureuse, boissons raffinées, ambiance chaleureuse.</p>
+        <div class="hero-actions">
+          <a href="#menu" class="btn btn-primary" data-i18n="hero.cta_primary">Réserver une table</a>
+          <a href="#events" class="btn btn-outline" data-i18n="hero.cta_secondary">Organiser un événement</a>
+        </div>
+        <div class="hero-proof" data-i18n="hero.proof">800+ invités · 50+ places de parking · Sécurité 24h/24 · Wi-Fi gratuit</div>
+      </div>
+
+      <!-- Indicateur de scroll — trait vertical animé, disparaît au premier scroll (§7.2) -->
+      <div class="hero-scroll-indicator" aria-hidden="true">
+        <svg width="2" height="32" viewBox="0 0 2 32" fill="none">
+          <rect x="1" y="0" width="1" height="32" fill="currentColor" opacity="0.6">
+            <animate attributeName="y" from="0" to="32" dur="2s" repeatCount="indefinite" />
+            <animate attributeName="opacity" from="0.6" to="0" dur="2s" repeatCount="indefinite" />
+          </rect>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ===========================================
+         À PROPOS — Mise en page asymétrique 7/5 (§7.3)
+         Chiffres clés alignés sur une ligne (pas 4 cartes)
+         Bande pleine largeur en --brand avec citation
+         =========================================== -->
+    <section id="about" class="section section-about" aria-labelledby="about-title">
+      <div class="container">
+        <!-- En-tête de section -->
+        <header class="section-header" data-reveal>
+          <span class="section-eyebrow">Lenox · Gitega</span>
+          <h2 id="about-title" class="section-title" data-i18n="about.title">À Propos de Lenox</h2>
+          <p class="section-lead" data-i18n="about.lead">Lenox Restaurant-Bar est votre destination de choix à Gitega pour une expérience culinaire exceptionnelle et des moments inoubliables.</p>
+        </header>
+
+        <!-- Grille asymétrique 7/5 : texte + photo avec bande terre cuite décalée -->
+        <div class="about-grid">
+          <div class="about-text" data-reveal>
+            <h3 class="about-story-title" data-i18n="about.story_title">Notre Histoire</h3>
+            <p data-i18n="about.story_p1">Situé au cœur de Gitega dans le quartier NYABIHARAGE, Lenox Restaurant-Bar est un établissement qui allie tradition et modernité. Nous nous engageons à offrir une expérience gastronomique unique dans une ambiance conviviale et chaleureuse.</p>
+            <p data-i18n="about.story_p2">Notre équipe passionnée travaille chaque jour pour vous proposer des plats savoureux, des boissons de qualité et des services d'exception pour tous vos événements.</p>
+          </div>
+
+          <!-- Photo avec bande terre cuite décalée de 24px en bas à droite (§7.3) -->
+          <div class="about-media" data-reveal>
+            <div class="about-photo-frame">
+              <img src="images/lenox-restaurant-court-yard.jpeg" alt="Salle du restaurant Lenox à Gitega" width="600" height="800" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </div>
+
+        <!-- Chiffres clés — alignés sur une ligne, séparés par filets verticaux 1px -->
+        <div class="stats-row" data-reveal>
+          <div class="stat">
+            <span class="stat-value" data-i18n="about.stats.capacity_value">800+</span>
+            <span class="stat-label" data-i18n="about.stats.capacity_label">Capacité d'accueil</span>
+          </div>
+          <span class="stat-divider" aria-hidden="true"></span>
+          <div class="stat">
+            <span class="stat-value" data-i18n="about.stats.parking_value">50+</span>
+            <span class="stat-label" data-i18n="about.stats.parking_label">Places de parking</span>
+          </div>
+          <span class="stat-divider" aria-hidden="true"></span>
+          <div class="stat">
+            <span class="stat-value" data-i18n="about.stats.years_value">«nb»</span>
+            <span class="stat-label" data-i18n="about.stats.years_label">Années à Gitega</span>
+          </div>
+          <span class="stat-divider" aria-hidden="true"></span>
+          <div class="stat">
+            <span class="stat-value" data-i18n="about.stats.events_value">«nb»</span>
+            <span class="stat-label" data-i18n="about.stats.events_label">Événements par an</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bande de citation pleine largeur en --brand (§7.3) -->
+      <aside class="quote-band" aria-label="Citation">
+        <div class="container">
+          <blockquote class="quote" data-reveal>
+            <p data-i18n="about.quote">«citation du propriétaire ou du chef»</p>
+            <cite data-i18n="about.quote_author">«Nom», «fonction»</cite>
+          </blockquote>
+        </div>
+      </aside>
+    </section>
+
+    <!-- ===========================================
+         SERVICES — Grille éditoriale asymétrique (§7.4)
+         PAS 6 cartes identiques :
+         - Salle de Réception : bloc large 2/3, photo de fond + texte en surimpression
+         - Restaurant + Bar : deux blocs moyens côte à côte
+         - Animations : bloc large horizontal, photo à gauche, texte à droite
+         - Parking + Sécurité : deux blocs compacts sans photo
+         =========================================== -->
+    <section id="services" class="section section-services" aria-labelledby="services-title">
+      <div class="container">
+        <header class="section-header" data-reveal>
+          <span class="section-eyebrow">Ce que nous offrons</span>
+          <h2 id="services-title" class="section-title" data-i18n="services.title">Nos Services</h2>
+          <p class="section-lead" data-i18n="services.lead">Découvrez la gamme complète de services que nous offrons pour faire de chaque moment une expérience mémorable.</p>
+        </header>
+
+        <!-- Grille éditoriale 12 colonnes -->
+        <div class="services-grid">
+
+          <!-- SALLE DE RÉCEPTION : bloc large, 2/3, photo de fond, texte en surimpression -->
+          <article class="service-block service-hall" data-reveal>
+            <picture class="service-bg" aria-hidden="true">
+              <img src="images/reception-hall-decor-2.jpeg" alt="" width="1200" height="800" loading="lazy" decoding="async">
+            </picture>
+            <div class="service-overlay"></div>
+            <div class="service-content">
+              <span class="service-number">01</span>
+              <h3 class="service-title" data-i18n="services.hall.title">Salle de Réception</h3>
+              <p class="service-body" data-i18n="services.hall.body">Espace pouvant accueillir plus de 800 personnes pour vos cérémonies, mariages, conférences et séminaires.</p>
+              <ul class="service-points">
+                <li data-i18n="services.hall.points[0]">Capacité 800+ personnes</li>
+                <li data-i18n="services.hall.points[1]">Équipements modernes</li>
+                <li data-i18n="services.hall.points[2]">Service traiteur</li>
+              </ul>
+              <a href="#events" class="service-link" aria-hidden="false">
+                <span data-i18n="events.cta">Demander un devis</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- RESTAURANT : bloc moyen, photo en tête -->
+          <article class="service-block service-restaurant" data-reveal>
+            <div class="service-media">
+              <img src="images/lenox-restaurant-platter.jpeg" alt="" width="600" height="600" loading="lazy" decoding="async">
+            </div>
+            <div class="service-content">
+              <span class="service-number">02</span>
+              <h3 class="service-title" data-i18n="services.restaurant.title">Restaurant</h3>
+              <p class="service-body" data-i18n="services.restaurant.body">Petits déjeuners, déjeuners et dîners savoureux avec une cuisine variée alliant spécialités locales et internationales.</p>
+              <ul class="service-points">
+                <li data-i18n="services.restaurant.points[0]">Cuisine africaine authentique</li>
+                <li data-i18n="services.restaurant.points[1]">Plats internationaux</li>
+                <li data-i18n="services.restaurant.points[2]">Service continu</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- BAR : bloc moyen, photo en tête -->
+          <article class="service-block service-bar" data-reveal>
+            <div class="service-media">
+              <img src="images/lenox-restaurant-court-yard (2).jpeg" alt="" width="600" height="600" loading="lazy" decoding="async">
+            </div>
+            <div class="service-content">
+              <span class="service-number">03</span>
+              <h3 class="service-title" data-i18n="services.bar.title">Bar</h3>
+              <p class="service-body" data-i18n="services.bar.body">Large gamme de boissons incluant les produits Brarudi, boissons internationales, vins, champagnes et cocktails.</p>
+              <ul class="service-points">
+                <li data-i18n="services.bar.points[0]">Bières locales</li>
+                <li data-i18n="services.bar.points[1]">Vins et champagnes</li>
+                <li data-i18n="services.bar.points[2]">Cocktails avec ou sans alcool</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- ANIMATIONS : bloc large horizontal, photo à gauche, texte à droite -->
+          <article class="service-block service-shows" data-reveal>
+            <div class="service-media">
+              <img src="images/reception-hall-decor-3.jpeg" alt="" width="800" height="500" loading="lazy" decoding="async">
+            </div>
+            <div class="service-content">
+              <span class="service-number">04</span>
+              <h3 class="service-title" data-i18n="services.shows.title">Animations</h3>
+              <p class="service-body" data-i18n="services.shows.body">Musique live, karaoké, performances de groupes et ambiance boîte de nuit pour prolonger vos soirées.</p>
+              <ul class="service-points">
+                <li data-i18n="services.shows.points[0]">Lenox Live Band</li>
+                <li data-i18n="services.shows.points[1]">Karaoké</li>
+                <li data-i18n="services.shows.points[2]">Ambiance boîte de nuit</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- PARKING : bloc compact sans photo (rassurance) -->
+          <article class="service-block service-parking" data-reveal>
+            <div class="service-content">
+              <svg class="service-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                <path d="M9 17V7h4a3 3 0 0 1 0 6H9"></path>
+              </svg>
+              <h3 class="service-title" data-i18n="services.parking.title">Parking</h3>
+              <p class="service-body" data-i18n="services.parking.body">Parking spacieux sécurisé pouvant accueillir plus de 50 voitures pour le confort de nos clients.</p>
+            </div>
+          </article>
+
+          <!-- SÉCURITÉ : bloc compact sans photo (rassurance) -->
+          <article class="service-block service-security" data-reveal>
+            <div class="service-content">
+              <svg class="service-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                <path d="m9 12 2 2 4-4"></path>
+              </svg>
+              <h3 class="service-title" data-i18n="services.security.title">Sécurité</h3>
+              <p class="service-body" data-i18n="services.security.body">Sécurité de haut niveau pour garantir la tranquillité d'esprit de nos invités lors de tous les événements.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===========================================
+         PHOTO BAND — Bande défilante horizontale (§7.9)
+         =========================================== -->
+    <div class="photo-band" aria-hidden="true" data-reveal>
+      <div class="photo-band-track">
+        <div class="photo-band-item">
+          <img src="images/reception-hall-decor.jpeg" alt="" width="640" height="400" loading="lazy" decoding="async">
+        </div>
+        <div class="photo-band-item">
+          <img src="images/reception-hall-decor-1.jpeg" alt="" width="640" height="400" loading="lazy" decoding="async">
+        </div>
+        <div class="photo-band-item">
+          <img src="images/reception-hall-decor-2.jpeg" alt="" width="640" height="400" loading="lazy" decoding="async">
+        </div>
+        <div class="photo-band-item">
+          <img src="images/reception-hall-decor-3.jpeg" alt="" width="640" height="400" loading="lazy" decoding="async">
+        </div>
+        <div class="photo-band-item">
+          <img src="images/lenox-restaurant-court-yard.jpeg" alt="" width="640" height="400" loading="lazy" decoding="async">
+        </div>
+        <div class="photo-band-item">
+          <img src="images/lenox-restaurant-platter.jpeg" alt="" width="640" height="400" loading="lazy" decoding="async">
+        </div>
+        <!-- Dupliqué pour boucle infinie sans saut -->
+        <div class="photo-band-item">
+          <img src="images/reception-hall-decor.jpeg" alt="" width="640" height="400" loading="lazy" decoding="async">
+        </div>
+        <div class="photo-band-item">
+          <img src="images/reception-hall-decor-1.jpeg" alt="" width="640" height="400" loading="lazy" decoding="async">
+        </div>
+        <div class="photo-band-item">
+          <img src="images/reception-hall-decor-2.jpeg" alt="" width="640" height="400" loading="lazy" decoding="async">
+        </div>
+        <div class="photo-band-item">
+          <img src="images/reception-hall-decor-3.jpeg" alt="" width="640" height="400" loading="lazy" decoding="async">
+        </div>
+        <div class="photo-band-item">
+          <img src="images/lenox-restaurant-court-yard.jpeg" alt="" width="640" height="400" loading="lazy" decoding="async">
+        </div>
+        <div class="photo-band-item">
+          <img src="images/lenox-restaurant-platter.jpeg" alt="" width="640" height="400" loading="lazy" decoding="async">
+        </div>
+      </div>
+    </div>
+
+    <!-- ===========================================
+         MENU SECTION — Onglets + liste à puces leader-dots (§7.5)
+         =========================================== -->
+    <section id="menu" class="section section-menu" aria-labelledby="menu-title">
+      <div class="container">
+        <header class="section-header" data-reveal>
+          <span class="section-eyebrow">Notre cuisine</span>
+          <h2 id="menu-title" class="section-title" data-i18n="menu.title">La Carte</h2>
+          <p class="section-lead" data-i18n="menu.lead">Une sélection de nos plats signature. Carte complète disponible sur place.</p>
+        </header>
+
+        <!-- Onglets du menu -->
+        <div class="menu-tabs" role="tablist" aria-label="Catégories du menu" data-reveal>
+          <button class="menu-tab" role="tab" aria-selected="true" aria-controls="menu-breakfast" id="tab-breakfast" data-i18n="menu.tab_breakfast">Petit-déjeuner</button>
+          <button class="menu-tab" role="tab" aria-selected="false" aria-controls="menu-main" id="tab-main" data-i18n="menu.tab_main">Déjeuner &amp; dîner</button>
+          <button class="menu-tab" role="tab" aria-selected="false" aria-controls="menu-bar" id="tab-bar" data-i18n="menu.tab_bar">Bar</button>
+        </div>
+
+        <!-- Panneau Petit-déjeuner (actif par défaut) -->
+        <div class="menu-panel" role="tabpanel" id="menu-breakfast" aria-labelledby="tab-breakfast">
+          <dl class="menu-list">
+            <dt data-i18n="menu.items">«à compléter : nom, description courte, prix pour 6 à 9 plats»</dt>
+            <dd></dd>
+          </dl>
+        </div>
+
+        <!-- Panneau Déjeuner & dîner -->
+        <div class="menu-panel" role="tabpanel" id="menu-main" aria-labelledby="tab-main" hidden>
+          <dl class="menu-list">
+            <dt data-i18n="menu.items">«à compléter : nom, description courte, prix pour 6 à 9 plats»</dt>
+            <dd></dd>
+          </dl>
+        </div>
+
+        <!-- Panneau Bar -->
+        <div class="menu-panel" role="tabpanel" id="menu-bar" aria-labelledby="tab-bar" hidden>
+          <dl class="menu-list">
+            <dt data-i18n="menu.items">«à compléter : nom, description courte, prix pour 6 à 9 plats»</dt>
+            <dd></dd>
+          </dl>
+        </div>
+
+        <!-- Note et lien téléchargement -->
+        <div class="menu-footer" data-reveal>
+          <p class="menu-note" data-i18n="menu.note">Les prix sont indiqués en francs burundais, service compris.</p>
+          <a href="#" class="btn btn-outline" data-i18n="menu.download">Télécharger la carte complète (PDF)</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===========================================
+         ÉVÉNEMENTS SECTION — 3 formules + devis (§7.6)
+         =========================================== -->
+    <section id="events" class="section section-events" aria-labelledby="events-title">
+      <div class="container">
+        <header class="section-header" data-reveal>
+          <span class="section-eyebrow">Vos réceptions</span>
+          <h2 id="events-title" class="section-title" data-i18n="events.title">Vos Événements</h2>
+          <p class="section-lead" data-i18n="events.lead">Mariages, conférences, séminaires : une salle de 800 places, un parking de 50 voitures, une équipe qui gère tout.</p>
+        </header>
+
+        <div class="events-grid">
+          <!-- MARIAGE -->
+          <article class="event-card" data-reveal>
+            <div class="event-media">
+              <img src="images/reception-hall-decor-4.jpeg" alt="Salle de réception configurée pour un mariage" width="600" height="400" loading="lazy" decoding="async">
+            </div>
+            <div class="event-content">
+              <h3 class="event-title" data-i18n="events.wedding_title">Mariage</h3>
+              <p class="event-body" data-i18n="events.wedding_body">Salle en configuration banquet, service traiteur, sonorisation et Lenox Live Band.</p>
+              <dl class="event-specs">
+                <dt data-i18n="events.capacity_label">Capacité</dt>
+                <dd>800+ personnes</dd>
+                <dt data-i18n="events.layout_label">Configuration</dt>
+                <dd>Banquet / Théâtre / Cocktail</dd>
+                <dt data-i18n="events.included_label">Inclus</dt>
+                <dd>
+                  <ul class="event-included">
+                    <li>Service traiteur complet</li>
+                    <li>Sonorisation professionnelle</li>
+                    <li>Lenox Live Band</li>
+                    <li>Décoration de base</li>
+                    <li>Parking 50+ places</li>
+                    <li>Sécurité 24h/24</li>
+                  </ul>
+                </dd>
+              </dl>
+              <button class="btn btn-primary event-quote" type="button" data-event-type="wedding" data-i18n="events.cta">Demander un devis</button>
+            </div>
+          </article>
+
+          <!-- CONFÉRENCE & SÉMINAIRE -->
+          <article class="event-card" data-reveal>
+            <div class="event-media">
+              <img src="images/reception-hall-decor-5.jpeg" alt="Salle de réception configurée pour une conférence" width="600" height="400" loading="lazy" decoding="async">
+            </div>
+            <div class="event-content">
+              <h3 class="event-title" data-i18n="events.conference_title">Conférence &amp; séminaire</h3>
+              <p class="event-body" data-i18n="events.conference_body">Configuration théâtre, Wi-Fi haut débit, pauses café et déjeuners sur place.</p>
+              <dl class="event-specs">
+                <dt data-i18n="events.capacity_label">Capacité</dt>
+                <dd>800+ personnes (théâtre)</dd>
+                <dt data-i18n="events.layout_label">Configuration</dt>
+                <dd>Théâtre / Classroom / U-shape</dd>
+                <dt data-i18n="events.included_label">Inclus</dt>
+                <dd>
+                  <ul class="event-included">
+                    <li>Wi-Fi haut débit dédié</li>
+                    <li>Écran et vidéoprojecteur</li>
+                    <li>Sonorisation</li>
+                    <li>Pauses café &amp; viennoiseries</li>
+                    <li>Déjeuners sur place</li>
+                    <li>Parking 50+ places</li>
+                    <li>Sécurité 24h/24</li>
+                  </ul>
+                </dd>
+              </dl>
+              <button class="btn btn-primary event-quote" type="button" data-event-type="conference" data-i18n="events.cta">Demander un devis</button>
+            </div>
+          </article>
+
+          <!-- SOIRÉE D'ENTREPRISE -->
+          <article class="event-card" data-reveal>
+            <div class="event-media">
+              <img src="images/reception-hall-decor-6.jpeg" alt="Salle de réception configurée pour une soirée d'entreprise" width="600" height="400" loading="lazy" decoding="async">
+            </div>
+            <div class="event-content">
+              <h3 class="event-title" data-i18n="events.corporate_title">Soirée d'entreprise</h3>
+              <p class="event-body" data-i18n="events.corporate_body">Cocktail dînatoire, bar complet, animation et sécurité dédiée.</p>
+              <dl class="event-specs">
+                <dt data-i18n="events.capacity_label">Capacité</dt>
+                <dd>800+ personnes</dd>
+                <dt data-i18n="events.layout_label">Configuration</dt>
+                <dd>Cocktail / Banquet / Pistes de danse</dd>
+                <dt data-i18n="events.included_label">Inclus</dt>
+                <dd>
+                  <ul class="event-included">
+                    <li>Cocktail dînatoire</li>
+                    <li>Bar complet (avec/sans alcool)</li>
+                    <li>Animation musicale / DJ</li>
+                    <li>Sonorisation &amp; éclairage</li>
+                    <li>Parking 50+ places</li>
+                    <li>Sécurité dédiée</li>
+                  </ul>
+                </dd>
+              </dl>
+              <button class="btn btn-primary event-quote" type="button" data-event-type="corporate" data-i18n="events.cta">Demander un devis</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===========================================
+         GALERIE SECTION — Masonry + filtres + lightbox (§7.7)
+         =========================================== -->
+    <section id="gallery" class="section section-gallery" aria-labelledby="gallery-title">
+      <div class="container">
+        <header class="section-header" data-reveal>
+          <span class="section-eyebrow">Notre univers</span>
+          <h2 id="gallery-title" class="section-title" data-i18n="gallery.title">Galerie</h2>
+          <p class="section-lead" data-i18n="gallery.lead">Découvrez nos espaces élégants, notre cuisine raffinée et l'ambiance unique qui fait de Lenox un lieu d'exception.</p>
+        </header>
+
+        <!-- Filtres par catégorie -->
+        <div class="gallery-filters" role="group" aria-label="Filtres de la galerie" data-reveal>
+          <button class="filter-chip is-active" data-filter="all" aria-pressed="true" data-i18n="gallery.filter_all">Tout</button>
+          <button class="filter-chip" data-filter="hall" aria-pressed="false" data-i18n="gallery.filter_hall">Salle</button>
+          <button class="filter-chip" data-filter="restaurant" aria-pressed="false" data-i18n="gallery.filter_restaurant">Restaurant</button>
+          <button class="filter-chip" data-filter="bar" aria-pressed="false" data-i18n="gallery.filter_bar">Bar</button>
+          <button class="filter-chip" data-filter="events" aria-pressed="false" data-i18n="gallery.filter_events">Événements</button>
+          <button class="filter-chip" data-filter="food" aria-pressed="false" data-i18n="gallery.filter_food">Cuisine</button>
+        </div>
+
+        <!-- Compteur visible / total -->
+        <p class="gallery-counter" aria-live="polite">
+          <span data-i18n="[html]gallery.counter" data-i18n-template="gallery.counter">1 / 12</span>
+        </p>
+
+        <!-- Grille masonry -->
+        <div class="gallery-grid" id="gallery-grid">
+          <!-- SALLE — décorations et ambiance -->
+          <button class="gallery-item" data-category="hall" data-index="0" type="button" aria-label="Vue de la salle de réception décorée">
+            <img src="images/reception-hall-decor.jpeg" alt="Salle de réception décorée" width="800" height="600" loading="lazy" decoding="async">
+            <span class="gallery-caption">Salle — Configuration banquet</span>
+          </button>
+
+          <button class="gallery-item" data-category="hall" data-index="1" type="button" aria-label="Salle de réception vue d'ensemble">
+            <img src="images/reception-hall-decor-1 (1).jpeg" alt="Salle de réception vue d'ensemble" width="800" height="600" loading="lazy" decoding="async">
+            <span class="gallery-caption">Salle — Vue d'ensemble</span>
+          </button>
+
+          <button class="gallery-item" data-category="hall" data-index="2" type="button" aria-label="Décoration florale de la salle">
+            <img src="images/reception-hall-decor-1 (2).jpeg" alt="Décoration florale de la salle" width="800" height="800" loading="lazy" decoding="async">
+            <span class="gallery-caption">Salle — Décoration florale</span>
+          </button>
+
+          <button class="gallery-item" data-category="hall" data-index="3" type="button" aria-label="Ambiance lumineuse de la salle">
+            <img src="images/reception-hall-decor-2 (1).jpeg" alt="Ambiance lumineuse de la salle" width="800" height="600" loading="lazy" decoding="async">
+            <span class="gallery-caption">Salle — Éclairage soigné</span>
+          </button>
+
+          <button class="gallery-item" data-category="hall" data-index="4" type="button" aria-label="Tables dressées pour cérémonie">
+            <img src="images/reception-hall-decor-7.jpeg" alt="Tables dressées pour cérémonie" width="800" height="1000" loading="lazy" decoding="async">
+            <span class="gallery-caption">Salle — Tables dressées</span>
+          </button>
+
+          <button class="gallery-item" data-category="hall" data-index="5" type="button" aria-label="Configuration théâtre pour conférence">
+            <img src="images/reception-hall-decor-8.jpeg" alt="Configuration théâtre pour conférence" width="800" height="600" loading="lazy" decoding="async">
+            <span class="gallery-caption">Salle — Configuration théâtre</span>
+          </button>
+
+          <button class="gallery-item" data-category="hall" data-index="6" type="button" aria-label="Salle en configuration banquet">
+            <img src="images/reception-hall-decor-9.jpeg" alt="Salle en configuration banquet" width="800" height="800" loading="lazy" decoding="async">
+            <span class="gallery-caption">Salle — Configuration banquet</span>
+          </button>
+
+          <!-- RESTAURANT — cour intérieure -->
+          <button class="gallery-item" data-category="restaurant" data-index="7" type="button" aria-label="Cour intérieure du restaurant">
+            <img src="images/lenox-restaurant-court-yard (1).jpeg" alt="Cour intérieure du restaurant" width="800" height="600" loading="lazy" decoding="async">
+            <span class="gallery-caption">Restaurant — Cour intérieure</span>
+          </button>
+
+          <!-- BAR — ambiance conviviale -->
+          <button class="gallery-item" data-category="bar" data-index="8" type="button" aria-label="Espace bar et boissons">
+            <img src="images/reception-hall-decor-3 (1).jpeg" alt="Espace bar et boissons" width="800" height="1000" loading="lazy" decoding="async">
+            <span class="gallery-caption">Bar — Sélection de boissons</span>
+          </button>
+
+          <!-- ÉVÉNEMENTS — cérémonies et soirées -->
+          <button class="gallery-item" data-category="events" data-index="9" type="button" aria-label="Événement avec musique live">
+            <img src="images/reception-hall-decor-3 (1).jpeg" alt="Événement avec musique live" width="800" height="600" loading="lazy" decoding="async">
+            <span class="gallery-caption">Événement — Musique live</span>
+          </button>
+
+          <button class="gallery-item" data-category="events" data-index="10" type="button" aria-label="Décoration événementielle">
+            <img src="images/reception-hall-decor-4 (1).jpeg" alt="Décoration événementielle" width="800" height="800" loading="lazy" decoding="async">
+            <span class="gallery-caption">Événement — Décoration soignée</span>
+          </button>
+
+          <!-- CUISINE — plats signature -->
+          <button class="gallery-item" data-category="food" data-index="11" type="button" aria-label="Plateau de plats signature">
+            <img src="images/lenox-restaurant-platter (1).jpeg" alt="Plateau de plats signature" width="800" height="600" loading="lazy" decoding="async">
+            <span class="gallery-caption">Cuisine — Plat signature</span>
+          </button>
+
+          <button class="gallery-item" data-category="food" data-index="12" type="button" aria-label="Présentation gastronomique">
+            <img src="images/lenox-restaurant-platter (2).jpeg" alt="Présentation gastronomique" width="800" height="1000" loading="lazy" decoding="async">
+            <span class="gallery-caption">Cuisine — Présentation soignée</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===========================================
+         CONTACT SECTION — Infos, carte, formulaire, WhatsApp (§7.8)
+         =========================================== -->
+    <section id="contact" class="section section-contact" aria-labelledby="contact-title">
+      <div class="container">
+        <header class="section-header" data-reveal>
+          <span class="section-eyebrow">Nous joindre</span>
+          <h2 id="contact-title" class="section-title" data-i18n="contact.title">Contactez-Nous</h2>
+          <p class="section-lead" data-i18n="contact.lead">Nous sommes là pour vous accompagner dans l'organisation de vos événements et répondre à toutes vos questions.</p>
+        </header>
+
+        <div class="contact-grid">
+          <!-- COLONNE GAUCHE : Infos + carte -->
+          <div class="contact-info" data-reveal>
+            <div class="contact-card">
+              <h3 data-i18n="contact.info_title">Informations de Contact</h3>
+
+              <dl class="contact-details">
+                <dt data-i18n="contact.address_label">Adresse</dt>
+                <dd>
+                  <address data-i18n="contact.address_value">Gitega, Quartier NYABIHARAGE, RN16</address>
+                </dd>
+
+                <dt data-i18n="contact.phone_label">Téléphone</dt>
+                <dd>
+                  <a href="tel:+25722405164" data-i18n="contact.phone_1">+257 22 40 51 64</a>
+                  <br>
+                  <a href="tel:+25765186498" data-i18n="contact.phone_2">+257 65 186 498</a>
+                </dd>
+
+                <dt data-i18n="contact.email_label">Email</dt>
+                <dd>
+                  <a href="mailto:lenoxgitega@gmail.com" data-i18n="contact.email_value">lenoxgitega@gmail.com</a>
+                </dd>
+
+                <dt data-i18n="contact.hours_label">Horaires</dt>
+                <dd>
+                  <span class="open-indicator" id="open-indicator" data-i18n="contact.open_now">Ouvert maintenant</span>
+                  <span class="hours-value" data-i18n="contact.hours_value">Ouvert tous les jours, service continu</span>
+                </dd>
+              </dl>
+
+              <!-- Itinéraire -->
+              <a href="https://maps.google.com/?q=Lenox+Restaurant+Bar+Gitega+NYABIHARAGE+RN16" target="_blank" rel="noopener" class="btn btn-outline directions-link" data-i18n="contact.directions">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span data-i18n="contact.directions">Ouvrir dans Maps</span>
+              </a>
+            </div>
+
+            <!-- Carte lazy-load -->
+            <div class="contact-map" data-reveal>
+              <div class="map-placeholder" id="map-placeholder">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <p data-i18n="contact.directions">Carte de localisation</p>
+                <button class="btn btn-primary load-map" type="button" data-i18n="contact.directions">Charger la carte</button>
+              </div>
+              <div class="map-iframe-container" id="map-iframe-container" hidden>
+                <!-- Iframe inséré par JS après clic -->
+              </div>
+            </div>
+          </div>
+
+          <!-- COLONNE DROITE : Formulaire -->
+          <div class="contact-form-wrapper" data-reveal>
+            <form id="contact-form" class="contact-form" novalidate>
+              <input type="hidden" name="event_type" id="form-event-type" value="">
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="firstname" data-i18n="form.firstname">Prénom</label>
+                  <input type="text" id="firstname" name="firstname" required autocomplete="given-name" data-i18n-attr="placeholder:form.firstname" placeholder="Prénom">
+                  <span class="form-error" aria-live="polite"></span>
+                </div>
+                <div class="form-group">
+                  <label for="lastname" data-i18n="form.lastname">Nom</label>
+                  <input type="text" id="lastname" name="lastname" required autocomplete="family-name" data-i18n-attr="placeholder:form.lastname" placeholder="Nom">
+                  <span class="form-error" aria-live="polite"></span>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email" data-i18n="form.email">Email</label>
+                  <input type="email" id="email" name="email" required autocomplete="email" data-i18n-attr="placeholder:form.email" placeholder="Email">
+                  <span class="form-error" aria-live="polite"></span>
+                </div>
+                <div class="form-group">
+                  <label for="phone" data-i18n="form.phone">Téléphone</label>
+                  <input type="tel" id="phone" name="phone" required autocomplete="tel" data-i18n-attr="placeholder:form.phone" placeholder="Téléphone">
+                  <span class="form-error" aria-live="polite"></span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="event_type" data-i18n="form.event_type">Type d'événement</label>
+                <select id="event_type" name="event_type" required data-i18n-attr="placeholder:form.event_type">
+                  <option value="" disabled selected data-i18n="form.event_type">Type d'événement</option>
+                  <option value="wedding" data-i18n="form.event_options[0]">Mariage</option>
+                  <option value="conference" data-i18n="form.event_options[1]">Conférence</option>
+                  <option value="seminar" data-i18n="form.event_options[2]">Séminaire</option>
+                  <option value="birthday" data-i18n="form.event_options[3]">Anniversaire</option>
+                  <option value="corporate" data-i18n="form.event_options[4]">Soirée d'entreprise</option>
+                  <option value="table" data-i18n="form.event_options[5]">Réservation de table</option>
+                  <option value="other" data-i18n="form.event_options[6]">Autre</option>
+                </select>
+                <span class="form-error" aria-live="polite"></span>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="date" data-i18n="form.date">Date souhaitée</label>
+                  <input type="date" id="date" name="date" required data-i18n-attr="placeholder:form.date">
+                  <span class="form-error" aria-live="polite"></span>
+                </div>
+                <div class="form-group">
+                  <label for="guests" data-i18n="form.guests">Nombre d'invités</label>
+                  <input type="number" id="guests" name="guests" min="1" max="1000" required data-i18n-attr="placeholder:form.guests" placeholder="Nombre d'invités">
+                  <span class="form-error" aria-live="polite"></span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="message" data-i18n="form.message">Message</label>
+                <textarea id="message" name="message" rows="5" required data-i18n-attr="placeholder:form.message" placeholder="Message"></textarea>
+                <span class="form-error" aria-live="polite"></span>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-submit" id="submit-btn">
+                <span class="btn-text" data-i18n="form.submit">Envoyer le Message</span>
+                <span class="btn-loading" hidden data-i18n="form.sending">Envoi en cours...</span>
+              </button>
+
+              <div class="form-status" id="form-status" aria-live="polite" hidden></div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Services disponibles -->
+        <div class="contact-amenities" data-reveal>
+          <h3 data-i18n="contact.amenities_title">Services Disponibles</h3>
+          <ul class="amenities-list">
+            <li data-i18n="contact.amenities[0]">Parking 50+ places</li>
+            <li data-i18n="contact.amenities[1]">Wi-Fi gratuit</li>
+            <li data-i18n="contact.amenities[2]">Salle 800+ personnes</li>
+            <li data-i18n="contact.amenities[3]">Sécurité 24h/24</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bouton WhatsApp flottant -->
+      <a href="https://wa.me/25765186498?text=Bonjour%20Lenox%2C%20je%20souhaite%20avoir%20des%20informations%20sur" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Écrire sur WhatsApp">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.454.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.472.099-.174.05-.372-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.372-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.626.712.227 1.36.194 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.454.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.472.099-.174.05-.372-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.372-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.626.712.227 1.36.194 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347-.297-.149z"></path></svg>
+        <span class="whatsapp-tooltip" data-i18n="contact.whatsapp">Écrire sur WhatsApp</span>
+      </a>
+    </section>
+
+    <!-- ===========================================
+         LIGHTBOX — Modale native <dialog> (§7.7)
+         Navigation clavier (←/→/Esc) + tactile (swipe)
+         =========================================== -->
+    <dialog id="lightbox" class="lightbox" aria-label="Visionneuse d'images">
+      <button class="lightbox-close" type="button" data-i18n-attr="aria-label:a11y.close" aria-label="Fermer">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M18 6L6 18"></path>
+          <path d="M6 6l12 12"></path>
+        </svg>
+      </button>
+
+      <button class="lightbox-nav lightbox-prev" type="button" data-i18n-attr="aria-label:a11y.prev_image" aria-label="Image précédente">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="m15 18-6-6 6-6"></path>
+        </svg>
+      </button>
+
+      <button class="lightbox-nav lightbox-next" type="button" data-i18n-attr="aria-label:a11y.next_image" aria-label="Image suivante">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="m9 18 6-6-6-6"></path>
+        </svg>
+      </button>
+
+      <figure class="lightbox-figure">
+        <img class="lightbox-image" id="lightbox-image" src="" alt="" width="1600" height="1200" decoding="async">
+        <figcaption class="lightbox-caption" id="lightbox-caption"></figcaption>
+      </figure>
+
+      <div class="lightbox-counter" id="lightbox-counter"></div>
+    </dialog>
+
+  </main>
+
+  <!-- ===========================================
+       FOOTER
+       =========================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <img src="images/lenox-logo.png" alt="Lenox Restaurant-Bar" width="120" height="120">
+        <p class="footer-tagline" data-i18n="footer.tagline">Restaurant, bar et salle de réception au cœur de Gitega.</p>
+        <p class="footer-location">Gitega, Burundi</p>
+      </div>
+      <div class="footer-nav">
+        <h3 data-i18n="footer.nav_title">Navigation</h3>
+        <ul>
+          <li><a href="#home" data-i18n="nav.home">Accueil</a></li>
+          <li><a href="#about" data-i18n="nav.about">À propos</a></li>
+          <li><a href="#services" data-i18n="nav.services">Services</a></li>
+          <li><a href="#menu" data-i18n="nav.menu">La carte</a></li>
+          <li><a href="#events" data-i18n="nav.events">Événements</a></li>
+          <li><a href="#gallery" data-i18n="nav.gallery">Galerie</a></li>
+          <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h3 data-i18n="contact.info_title">Contact</h3>
+        <p><strong data-i18n="contact.address_label">Adresse</strong> : Gitega, Quartier NYABIHARAGE, RN16</p>
+        <p><strong data-i18n="contact.phone_label">Téléphone</strong> : <a href="tel:+25722405164">+257 22 40 51 64</a></p>
+        <p><strong data-i18n="contact.phone_label">Téléphone</strong> : <a href="tel:+25765186498">+257 65 186 498</a></p>
+        <p><strong data-i18n="contact.email_label">Email</strong> : <a href="mailto:lenoxgitega@gmail.com">lenoxgitega@gmail.com</a></p>
+      </div>
+      <div class="footer-hours">
+        <h3 data-i18n="contact.hours_label">Horaires</h3>
+        <p>7h00 - 23h00</p>
+      </div>
+      <div class="footer-lang">
+        <h3 data-i18n="a11y.select_language">Langue</h3>
+        <div class="lang-selector">
+          <button id="lang-toggle-footer" class="lang-toggle" popovertarget="lang-menu-footer" aria-haspopup="true" data-i18n-attr="aria-label:a11y.select_language">
+            <span class="lang-current" id="lang-current-footer">FR</span>
+            <svg class="lang-caret" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="m6 9 6 6 6-6"></path>
+            </svg>
+          </button>
+          <div id="lang-menu-footer" class="lang-menu" popover role="menu">
+            <button class="lang-option" role="menuitem" data-lang="fr" aria-current="true">
+              <span class="lang-pip" aria-hidden="true"></span>
+              <span class="lang-name">Français</span>
+              <span class="lang-code">FR</span>
+            </button>
+            <button class="lang-option" role="menuitem" data-lang="rn">
+              <span class="lang-pip" aria-hidden="true"></span>
+              <span class="lang-name">Ikirundi</span>
+              <span class="lang-code">RN</span>
+            </button>
+            <button class="lang-option" role="menuitem" data-lang="en">
+              <span class="lang-pip" aria-hidden="true"></span>
+              <span class="lang-name">English</span>
+              <span class="lang-code">EN</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-social">
+        <a href="#" class="social-link" aria-label="Facebook" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="#" class="social-link" aria-label="Instagram" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+        </a>
+      </div>
+      <p data-i18n="footer.rights">© 2026 Lenox Restaurant-Bar. Tous droits réservés.</p>
+      <p data-i18n="footer.location">Gitega, Burundi</p>
+    </div>
+  </footer>
+
+  <!-- ===========================================
+       SCRIPTS — JS natifs (defer, IIFE)
+       Pas de type="module" → fonctionne via file:// et HTTP
+       =========================================== -->
+  <script defer src="assets/js/scroll.js"></script>
+  <script defer src="assets/js/theme.js"></script>
+  <script defer src="assets/js/i18n.js"></script>
+  <script defer src="assets/js/menu.js"></script>
+  <script defer src="assets/js/events.js"></script>
+  <script defer src="assets/js/gallery.js"></script>
+  <script defer src="assets/js/contact.js"></script>
+  <script defer src="assets/js/animations.js"></script>
+</body>
+</html>

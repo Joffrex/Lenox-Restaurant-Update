@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(head -n 234 \"/c/Users/YFCB/VS Code Pro/Lenox Restaurant Update/assets/css/tokens.css\")",
+      "Bash(mv /tmp/tokens_clean.css \"/c/Users/YFCB/VS Code Pro/Lenox Restaurant Update/assets/css/tokens.css\")",
+      "Bash(cat > *)"
+    ]
+  }
+}

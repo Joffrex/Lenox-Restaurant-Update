@@ -1,0 +1,187 @@
+{
+  "meta": {
+    "title": "Lenox Restaurant-Bar Gitega | 800-Seat Reception Hall, Restaurant & Bar",
+    "description": "Restaurant, bar and 800-seat reception hall in Gitega, NYABIHARAGE district. African and international cuisine, live entertainment, 50-space parking, 24/7 security."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "menu": "Menu",
+    "events": "Events",
+    "gallery": "Gallery",
+    "contact": "Contact",
+    "book": "Book"
+  },
+  "hero": {
+    "eyebrow": "Gitega · NYABIHARAGE District · Since 20XX",
+    "title": "The table and the hall that make Gitega's grandest days",
+    "lead": "A welcoming venue for your events and ceremonies. Flavorful cuisine, refined drinks, warm atmosphere.",
+    "cta_primary": "Book a table",
+    "cta_secondary": "Plan an event",
+    "proof": "800+ guests · 50+ parking spaces · 24/7 security · Free Wi-Fi",
+    "scroll": "Discover"
+  },
+  "about": {
+    "title": "About Lenox",
+    "lead": "Lenox Restaurant-Bar is your premier destination in Gitega for an exceptional culinary experience and unforgettable moments.",
+    "story_title": "Our Story",
+    "story_p1": "Located in the heart of Gitega in the NYABIHARAGE district, Lenox Restaurant-Bar is an establishment that blends tradition and modernity. We are committed to offering a unique gastronomic experience in a warm and convivial atmosphere.",
+    "story_p2": "Our passionate team works every day to bring you flavorful dishes, quality drinks, and exceptional services for all your events.",
+    "quote": "«owner or chef quote»",
+    "quote_author": "«Name», «title»",
+    "stats": {
+      "capacity_value": "800+",
+      "capacity_label": "Guest capacity",
+      "parking_value": "50+",
+      "parking_label": "Parking spaces",
+      "years_value": "«nb»",
+      "years_label": "Years in Gitega",
+      "events_value": "«nb»",
+      "events_label": "Events per year"
+    },
+    "highlights": {
+      "cuisine_title": "Varied Cuisine",
+      "cuisine_body": "Delicious breakfasts, lunches and dinners featuring local and international specialties.",
+      "shows_title": "Live Entertainment",
+      "shows_body": "Live music, karaoke, and band performances to liven up your evenings.",
+      "events_title": "Events",
+      "events_body": "Reception hall for 800+ people, ideal for weddings and conferences.",
+      "wifi_title": "Free Wi-Fi",
+      "wifi_body": "High-speed internet available for all guests."
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "lead": "Discover the full range of services we offer to make every moment a memorable experience.",
+    "restaurant": {
+      "title": "Restaurant",
+      "body": "Delicious breakfasts, lunches and dinners with varied cuisine blending local and international specialties.",
+      "points": ["Authentic African cuisine", "International dishes", "Continuous service"]
+    },
+    "bar": {
+      "title": "Bar",
+      "body": "Wide selection of drinks including Brarudi products, international beverages, wines, champagnes and cocktails.",
+      "points": ["Local beers", "Wines and champagnes", "Cocktails with or without alcohol"]
+    },
+    "shows": {
+      "title": "Live Entertainment",
+      "body": "Live music, karaoke, band performances and nightclub atmosphere to extend your evenings.",
+      "points": ["Lenox Live Band", "Karaoke", "Nightclub atmosphere"]
+    },
+    "hall": {
+      "title": "Reception Hall",
+      "body": "Space accommodating 800+ people for your ceremonies, weddings, conferences and seminars.",
+      "points": ["800+ capacity", "Modern equipment", "Catering service"]
+    },
+    "parking": {
+      "title": "Parking",
+      "body": "Spacious secure parking for 50+ vehicles for our guests' comfort.",
+      "points": ["50+ spaces", "Secured", "Easy access"]
+    },
+    "security": {
+      "title": "Security",
+      "body": "High-level security ensuring peace of mind for our guests during all events.",
+      "points": ["24/7 surveillance", "Qualified staff", "Safe environment"]
+    }
+  },
+  "menu": {
+    "title": "The Menu",
+    "lead": "A selection of our signature dishes. Full menu available on site.",
+    "tab_breakfast": "Breakfast",
+    "tab_main": "Lunch & dinner",
+    "tab_bar": "Bar",
+    "currency": "BIF",
+    "download": "Download full menu (PDF)",
+    "note": "Prices are in Burundian francs, service included.",
+    "items": "«to complete: name, short description, price for 6 to 9 dishes»"
+  },
+  "events": {
+    "title": "Your Events",
+    "lead": "Weddings, conferences, seminars: an 800-seat hall, 50-car parking, a team that handles everything.",
+    "wedding_title": "Wedding",
+    "wedding_body": "Banquet hall setup, catering service, sound system and Lenox Live Band.",
+    "conference_title": "Conference & seminar",
+    "conference_body": "Theater configuration, high-speed Wi-Fi, coffee breaks and lunches on site.",
+    "corporate_title": "Corporate evening",
+    "corporate_body": "Dinner cocktail, full bar, entertainment and dedicated security.",
+    "capacity_label": "Capacity",
+    "layout_label": "Configuration",
+    "included_label": "Included",
+    "cta": "Request a quote"
+  },
+  "gallery": {
+    "title": "Gallery",
+    "lead": "Discover our elegant spaces, refined cuisine and the unique atmosphere that makes Lenox an exceptional venue.",
+    "filter_all": "All",
+    "filter_hall": "Hall",
+    "filter_restaurant": "Restaurant",
+    "filter_bar": "Bar",
+    "filter_events": "Events",
+    "filter_food": "Cuisine",
+    "load_more": "View more photos",
+    "counter": "{current} / {total}"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "lead": "We are here to help you organize your events and answer all your questions.",
+    "info_title": "Contact Information",
+    "address_label": "Address",
+    "address_value": "Gitega, NYABIHARAGE District, RN16",
+    "phone_label": "Phone",
+    "phone_1": "+257 22 40 51 64",
+    "phone_2": "+257 65 186 498",
+    "email_label": "Email",
+    "email_value": "lenoxgitega@gmail.com",
+    "hours_label": "Hours",
+    "hours_value": "Open daily, continuous service",
+    "open_now": "Open now",
+    "closed_now": "Closed, opens at {time}",
+    "directions": "Open in Maps",
+    "whatsapp": "Message on WhatsApp",
+    "whatsapp_prefill": "Hello Lenox, I would like information about",
+    "amenities_title": "Available Services",
+    "amenities": ["50+ parking spaces", "Free Wi-Fi", "800+ seat hall", "24/7 security"]
+  },
+  "form": {
+    "title": "Send Us a Message",
+    "firstname": "First name",
+    "lastname": "Last name",
+    "email": "Email",
+    "phone": "Phone",
+    "event_type": "Event type",
+    "event_options": ["Wedding", "Conference", "Seminar", "Birthday", "Corporate evening", "Table reservation", "Other"],
+    "date": "Preferred date",
+    "guests": "Number of guests",
+    "message": "Message",
+    "submit": "Send Message",
+    "sending": "Sending",
+    "success_title": "Message received",
+    "success_body": "Thank you. Our team will respond within 24 hours. For urgent requests, call +257 65 186 498.",
+    "error": "Sending failed. Please try again or call us directly.",
+    "required": "This field is required",
+    "invalid_email": "Invalid email address",
+    "invalid_phone": "Invalid phone number"
+  },
+  "a11y": {
+    "skip_to_content": "Skip to content",
+    "toggle_theme": "Toggle theme",
+    "theme_light": "Light theme",
+    "theme_dark": "Dark theme",
+    "select_language": "Select language",
+    "open_menu": "Open menu",
+    "close_menu": "Close menu",
+    "close": "Close",
+    "prev_image": "Previous image",
+    "next_image": "Next image"
+  },
+  "footer": {
+    "tagline": "Restaurant, bar and reception hall in the heart of Gitega.",
+    "nav_title": "Navigation",
+    "contact_title": "Contact",
+    "hours_title": "Hours",
+    "follow": "Follow us",
+    "rights": "© 2026 Lenox Restaurant-Bar. All rights reserved.",
+    "location": "Gitega, Burundi"
+  }
+}

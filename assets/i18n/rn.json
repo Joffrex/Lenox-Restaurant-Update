@@ -1,0 +1,187 @@
+{
+  "meta": {
+    "title": "Lenox Iresitora-Akabare Gitega | Inzu y'ibirori y'abantu 800, iresitora n'akabare",
+    "description": "Iresitora, akabare n'inzu y'ibirori y'abantu 800 i Gitega, mu mudugudu wa NYABIHARAGE. Ibifungurwa vy'iburaya n'ivy'isi, umuziki uba ubonetse, ubwikinge bw'imodoka 50, umutekano 24/24."
+  },
+  "nav": {
+    "home": "Ahabanza",
+    "about": "Ivyerekeye Lenox",
+    "services": "Serivisi",
+    "menu": "Urutonde rw'ibifungurwa",
+    "events": "Ibirori",
+    "gallery": "Amafoto",
+    "contact": "Twandikire",
+    "book": "Gufata ikibanza"
+  },
+  "hero": {
+    "eyebrow": "Gitega · Umudugudu wa NYABIHARAGE · Kuva 20XX",
+    "title": "Ameza n'inzu bitera imigambi myiza i Gitega",
+    "lead": "Ahantu hehezagiye ku birori vyanyu n'ibonekerwa. Ibifungurwa vy'umuhemu, ibinyobwa vyatoroshe, ibidukikije vyiza.",
+    "cta_primary": "Gufata ikibanza c'ameza",
+    "cta_secondary": "Gutegura igitaramo",
+    "proof": "Abashitsi 800+ · Aho kuhagarika imodoka 50+ · Umutekano 24/24 · Wi-Fi y'ubuntu",
+    "scroll": "Raba"
+  },
+  "about": {
+    "title": "Ivyerekeye Lenox",
+    "lead": "Lenox Iresitora-Akabare ni ho uhurira mu gisagara ca Gitega ku bushikiro bwiza bw'ibifungurwa n'ibibihe bitaryozwa.",
+    "story_title": "Amateka yacu",
+    "story_p1": "Iri hantu ryatewe mu mutima wa Gitega mu mudugudu wa NYABIHARAGE, Lenox Iresitora-Akabare ni ico gisenge gikomatanyije imico n'igihe gishasha. Twiyemeje gutanga ubushikiro bw'ibifungurwa budasanzwe mu bidukikije vy'ubumwe n'ubushikiro.",
+    "story_p2": "Itsinda ryacu ry'abakozi b'umutima rikora buri musi kugira ritange ibifungurwa vy'umuhemu, ibinyobwa vyiza, na serivisi nziza ku birori vyanyu vyose.",
+    "quote": "«igisomwa c'umuyobozi canke umushitsi»",
+    "quote_author": "«Izina», «akazi»",
+    "stats": {
+      "capacity_value": "800+",
+      "capacity_label": "Abashoboye kwakirwa",
+      "parking_value": "50+",
+      "parking_label": "Ibibanza vy'imodoka",
+      "years_value": "«nb»",
+      "years_label": "Imyaka i Gitega",
+      "events_value": "«nb»",
+      "events_label": "Ibirori mu mwaka"
+    },
+    "highlights": {
+      "cuisine_title": "Ibifungurwa vyinshi",
+      "cuisine_body": "Ibitangira umunsi, amafunguro y'amanywa n'ary'ijoro vy'umuhemu bifise ibikoresho vyo mu karere n'ivy'isi yose.",
+      "shows_title": "Uburyohe bw'umuziki",
+      "shows_body": "Umuziki uba ubonetse, karaoke, n'ibikorwa vy'amatsinda kugira bishimishe ubwire bwanyu bw'ijoro.",
+      "events_title": "Ibirori",
+      "events_body": "Inzu y'ibirori y'abantu 800+, ikwiye kubera ubukwe n'amanama.",
+      "wifi_title": "Wi-Fi y'ubuntu",
+      "wifi_body": "Interineti y'umuvuduko munini iboneka ku bashitsi bose."
+    }
+  },
+  "services": {
+    "title": "Serivisi zacu",
+    "lead": "Raba interuro yose y'ibikorwa dutanga kugira igihe cose kibe ico kidukikije neza.",
+    "restaurant": {
+      "title": "Iresitora",
+      "body": "Ibitangira umunsi, amafunguro y'amanywa n'ary'ijoro vy'umuhemu bifise ibikoresho vyo mu karere n'ivy'isi yose.",
+      "points": ["Ibifungurwa vy'iburaya vy'ukuri", "Ibifungurwa vy'isi yose", "Serivisi idahagarara"]
+    },
+    "bar": {
+      "title": "Akabare",
+      "body": "Ubwoko bwinshi bw'ibinyobwa birimwo ivya Brarudi, ibinyobwa vy'isi yose, divayi, shampanye n'ivya cocktail.",
+      "points": ["Inzoga z'aho", "Divayi na shampanye", "Cocktails zifise canke zitafise inzoga"]
+    },
+    "shows": {
+      "title": "Uburyohe bw'umuziki",
+      "body": "Umuziki uba ubonetse, karaoke, ibikorwa vy'amatsinda n'ibidukikije vya night club kugura ijoro ryanyu.",
+      "points": ["Lenox Live Band", "Karaoke", "Ibidukikije vya night club"]
+    },
+    "hall": {
+      "title": "Inzu y'ibirori",
+      "body": "Ahantu hashobora kwakira abantu 800+ ku birori vyanyu, ubukwe, amanama n'inyigisho.",
+      "points": ["Abantu 800+", "Ibikoresho bishasha", "Serivisi y'ibifungurwa"]
+    },
+    "parking": {
+      "title": "Ubwikinge bw'imodoka",
+      "body": "Ubwikinge bw'imodoka bwiza bwizewe bushobora kwakira imodoka 50+ ku gukwegera kw'abakiliya bacu.",
+      "points": ["Ibibanza 50+", "Bizewe", "Kwinjira bisanzwe"]
+    },
+    "security": {
+      "title": "Umutekano",
+      "body": "Umutekano w'urugero rwo hejuru kugira utange umutekano w'imitima ku bashitsi mu birori vyose.",
+      "points": ["Gukurikirana 24/24", "Abakozi bahuguwe", "Ibidukikije bizewe"]
+    }
+  },
+  "menu": {
+    "title": "Urutonde rw'ibifungurwa",
+    "lead": "Ihitamwo ry'ibifungurwa vyacu vy'umuhemu. Urutonde rwuzuye ruboneka aho.",
+    "tab_breakfast": "Ibitangira umunsi",
+    "tab_main": "Amafunguro y'amanywa n'ijoro",
+    "tab_bar": "Akabare",
+    "currency": "BIF",
+    "download": "Kurura urutonde rwuzuye (PDF)",
+    "note": "Ibiciro vyerekanwa mu mafaranga y'uburundi, serivisi irimwo.",
+    "items": "«gusubiriza: izina, ivyo bisobanuro bicye, igiciro ku bifungurwa 6 kugeza 9»"
+  },
+  "events": {
+    "title": "Ibirori vyanyu",
+    "lead": "Ubukwe, amanama, inyigisho: inzu y'abantu 800, ubwikinge bw'imodoka 50, itsinda rishobora vyose.",
+    "wedding_title": "Ubukwe",
+    "wedding_body": "Inzu itunganyije mu buryo bwa banquet, serivisi y'ibifungurwa, sisitemu y'ijwi na Lenox Live Band.",
+    "conference_title": "Inama n'inyigisho",
+    "conference_body": "Iterambere rya theatre, Wi-Fi y'umuvuduko, akaruhuko k'ikawa n'amafunguro aho.",
+    "corporate_title": "Ijoro ry'ishirahamwe",
+    "corporate_body": "Cocktail y'ijoro, akabare kuzuye, uburyohe n'umutekano wihariye.",
+    "capacity_label": "Ubushobozi",
+    "layout_label": "Iterambere",
+    "included_label": "Birimwo",
+    "cta": "Kusaba igiciro"
+  },
+  "gallery": {
+    "title": "Amafoto",
+    "lead": "Raba ahantu hacu heza, ibifungurwa vyacu vy'umuhemu n'ibidukikije vyihariye bituma Lenox ariho hatangaje.",
+    "filter_all": "Vyose",
+    "filter_hall": "Inzu",
+    "filter_restaurant": "Iresitora",
+    "filter_bar": "Akabare",
+    "filter_events": "Ibirori",
+    "filter_food": "Ibifungurwa",
+    "load_more": "Raba amafoto arenga",
+    "counter": "{current} / {total}"
+  },
+  "contact": {
+    "title": "Twandikire",
+    "lead": "Tur hano kugira tugufashe gutegura ibirori vyanyu no gusubiza ibibazo vyanyu vyose.",
+    "info_title": "Amakuru y'itumanaho",
+    "address_label": "Aderesi",
+    "address_value": "Gitega, Umudugudu wa NYABIHARAGE, RN16",
+    "phone_label": "Telefone",
+    "phone_1": "+257 22 40 51 64",
+    "phone_2": "+257 65 186 498",
+    "email_label": "Imeyili",
+    "email_value": "lenoxgitega@gmail.com",
+    "hours_label": "Amasaha",
+    "hours_value": "Turafunguye buri musi, serivisi idahagarara",
+    "open_now": "Turafunguye ubu",
+    "closed_now": "Twugaye, tuzofungura saa {time}",
+    "directions": "Fungura muri Maps",
+    "whatsapp": "Andikira kuri WhatsApp",
+    "whatsapp_prefill": "Muraho Lenox, nshaka kubona amakuru kuri",
+    "amenities_title": "Serivisi ziboneka",
+    "amenities": ["Ibibanza vy'imodoka 50+", "Wi-Fi y'ubuntu", "Inzu y'abantu 800+", "Umutekano 24/24"]
+  },
+  "form": {
+    "title": "Tungikira ubutumwa",
+    "firstname": "Izina rya mbere",
+    "lastname": "Izina rya nyuma",
+    "email": "Imeyili",
+    "phone": "Telefone",
+    "event_type": "Ubwoko bw'igitaramo",
+    "event_options": ["Ubukwe", "Inama", "Inyigisho", "Isabukuru", "Ijoro ry'ishirahamwe", "Gufata ikibanza c'ameza", "Ikindi"],
+    "date": "Itariki ipfunwe",
+    "guests": "Umubare w'abashitsi",
+    "message": "Ubutumwa",
+    "submit": "Tungika ubutumwa",
+    "sending": "Birarungikwa",
+    "success_title": "Ubutumwa bwaragiye",
+    "success_body": "Murakoze. Itsinda ryacu rizogusubiza mu masaha 24. Ku bikenewe vyunama, hamagara +257 65 186 498.",
+    "error": "Kurungika vyankiwe. Gerageza canke utuhamagare ubwawe.",
+    "required": "Iki gipfunwe kenewe",
+    "invalid_email": "Aderesi y'imeyili itari yo",
+    "invalid_phone": "Nomero ya telefone itari yo"
+  },
+  "a11y": {
+    "skip_to_content": "Kuja ku birimwo",
+    "toggle_theme": "Hindura ibara ry'urupapuro",
+    "theme_light": "Ibara ry'urupapuro ry'umuco",
+    "theme_dark": "Ibara ry'urupapuro ry'ijimye",
+    "select_language": "Hitamwo ururimi",
+    "open_menu": "Fungura urutonde",
+    "close_menu": "Runga urutonde",
+    "close": "Runga",
+    "prev_image": "Ishusho ibanziriza",
+    "next_image": "Ishusho ikurikira"
+  },
+  "footer": {
+    "tagline": "Iresitora, akabare n'inzu y'ibirori mu mutima wa Gitega.",
+    "nav_title": "Ubutumwa",
+    "contact_title": "Itumanaho",
+    "hours_title": "Amasaha",
+    "follow": "Dukurikire",
+    "rights": "© 2026 Lenox Iresitora-Akabare. Uburenganzira bwose burabitswe.",
+    "location": "Gitega, Uburundi"
+  }
+}

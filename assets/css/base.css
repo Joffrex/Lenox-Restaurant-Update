@@ -1,0 +1,412 @@
+/**
+ * LENOX Restaurant-Bar — Base CSS
+ * Reset, éléments HTML de base, utilitaires, focus-visible
+ * Aucune couleur ni valeur de design en dur — tout passe par tokens.css
+ */
+
+/* ============================================================
+   RESET DE BASE — Normalize minimaliste
+   ============================================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Utiliser la police système comme fallback principal */
+html {
+  font-family: var(--font-text);
+  font-size: 100%; /* 16px par défaut, modifiable via JS si besoin */
+  font-weight: 400;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Supprimer le margin par défaut sur les balises classiques */
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+dl, dd, ol, ul,
+li, figure,
+header, footer,
+nav, main,
+article, section, aside,
+fieldset, legend,
+details, summary,
+form, fieldset, legend,
+table, tbody, tr, th, td,
+capture, canvas,
+audio, video,
+img, svg, video,
+button, input, select, textarea,
+a, abbr, acronym,
+b, i, em, strong,
+br, hr,
+cite, code,
+small, mark,
+del, ins,
+time, datalist,
+output, progress,
+meter, keygen,
+caption, colgroup {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  color: inherit;
+  text-decoration: none;
+  vertical-align: baseline;
+}
+
+/* Reset des listes */
+ol, ul {
+  list-style: none;
+}
+
+/* Reset des figures */
+figure {
+  margin: 0;
+}
+
+/* Reset des inputs */
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: inherit;
+  color: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* Reset des boutons */
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* Reset des liens */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Reset des images */
+img, svg, canvas, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Reset du select */
+select {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Reset du textarea */
+textarea {
+  resize: vertical;
+}
+
+/* Supprimer le style de base des blocks de citation */
+blockquote, q {
+  quotes: '"' '"' "'" "'";
+}
+
+/* ============================================================
+   ÉLÉMENTS STRUCTURELS DE BASE — HTML5
+   ============================================================ */
+
+/* Header sticky avec effet blur au scroll (voir header.css pour les détails) */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+}
+
+/* Main content wrapper */
+main {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+}
+
+/* Section avec aria-labelledby */
+section {
+  padding-block: var(--section-y);
+}
+
+/* Footer — background brand géré dans layout.css */
+footer {
+  width: 100%;
+}
+
+/* ============================================================
+   TYPOGRAPHIE DE BASE
+   ============================================================ */
+
+/* Hiérarchie des titres — ratios respectifs 1.25+ */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: var(--leading-tight);
+  color: var(--ink);
+}
+
+/* H1 — titrage principal du hero */
+h1 {
+  font-size: var(--text-3xl);
+  font-variation-settings: 'opsz' 144, 'wght' 700;
+}
+
+/* H2 — titres de sections */
+h2 {
+  font-size: var(--text-2xl);
+  font-weight: 600;
+}
+
+/* H3 — sous-titres */
+h3 {
+  font-size: var(--text-xl);
+  font-weight: 600;
+}
+
+/* H4, H5, H6 — utilisation rare */
+h4 {
+  font-size: clamp(1.25rem, 1vw + 1rem, 1.5rem);
+}
+h5, h6 {
+  font-size: var(--text-base);
+}
+
+/* Paragraphes */
+p {
+  font-size: var(--text-base);
+  line-height: var(--leading-body);
+  color: var(--ink);
+}
+
+/* Accroc / chapô */
+p.lead, .lead {
+  font-size: var(--text-lg);
+  font-weight: 500;
+  line-height: var(--leading-snug);
+  color: var(--ink-2);
+}
+
+/* Citations */
+blockquote, .blockquote {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-style: italic;
+  line-height: var(--leading-snug);
+  color: var(--ink);
+  padding-inline: 1rem;
+  border-left: 3px solid var(--accent);
+}
+
+/* Listes simples */
+ul, ol {
+  line-height: var(--leading-body);
+  margin-block-end: 1em;
+}
+ul li, ol li {
+  margin-bottom: 0.5em;
+}
+
+/* Points de liste stylisés (terre cuite) */
+ul.has-points li::before {
+  content: '•';
+  color: var(--accent);
+  font-weight: 600;
+  margin-right: 0.5ch;
+}
+
+/* Listes numérotées avec Fraunces */
+ol.reset-counter {
+  counter-reset: item;
+}
+ol.reset-counter li {
+  counter-increment: item;
+}
+ol.reset-counter li::before {
+  content: counters(item, ".") " ";
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--brand);
+}
+
+/* ============================================================
+   LIENS
+   ============================================================ */
+
+a {
+  color: var(--brand);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--brand-hover);
+}
+
+/* Lien texte sans soulignement par défaut (complément CSS) */
+.text-link {
+  text-decoration: none;
+  color: var(--accent);
+}
+
+.text-link:hover,
+.text-link:focus-visible {
+  text-decoration: underline;
+  color: var(--accent-hover);
+}
+
+/* Lien externe */
+a[target="_blank"]::after {
+  content: ' ↗';
+  font-size: 0.8em;
+  vertical-align: baseline;
+  opacity: 0.7;
+}
+
+/* ============================================================
+   FOCUS-VISIBLE — Toujours visible, toujours stylé
+   ============================================================ */
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Anneau de focus pour boutons liens */
+a:focus-visible,
+button:focus-visible,
+[role="button"]:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ============================================================
+   UTILITAIRES DE BASE
+   ============================================================ */
+
+/* Flex centering */
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Grid centering */
+.grid-center {
+  display: grid;
+  place-items: center;
+}
+
+/* Visually hidden (pour screen readers) */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* Skeleton loading */
+.skeleton {
+  background: linear-gradient(90deg, var(--surface-2) 25%, var(--surface) 50%, var(--surface-2) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+  border-radius: var(--radius-sm);
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Hidden / Show */
+.hidden {
+  display: none !important;
+}
+
+/* Container queries — base */
+@container (min-width: 300px) {
+  .card {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--space-sm);
+  }
+}
+
+/* ============================================================
+   MEDIA QUERIES — Mobile-first
+   ============================================================ */
+
+/* ≥ 640px — sm */
+@media (min-width: 40em) {
+  :root {
+    --text-3xl: clamp(3rem, 6vw + 1.5rem, 5.5rem);
+  }
+}
+
+/* ≥ 768px — md (tablet) */
+@media (min-width: 48em) {
+  .grid {
+    display: grid;
+    gap: var(--gutter);
+  }
+}
+
+/* ≥ 1024px — lg */
+@media (min-width: 64em) {
+  :root {
+    --text-3xl: clamp(2.75rem, 5.5vw + 1rem, 5.5rem);
+  }
+}
+
+/* ≥ 1280px — xl */
+@media (min-width: 80em) {
+  :root {
+    --gutter: clamp(1.5rem, 5vw, 3rem);
+  }
+}
+
+/* ============================================================
+   ACCESSIBILITY HELPERS
+   ============================================================ */
+
+/* Reduire le contraste pour les titres trop lourds */
+.high-contrast {
+  color: var(--ink) !important;
+}
+
+/* Pour les contrastes critiques sous aria-label */
+[aria-label] {
+  color: var(--ink) !important;
+}
+
+/* Hover: none — neutraliser les survols sur tactile */
+@media (hover: none) {
+  a:hover,
+  button:hover,
+  .card:hover,
+  [data-reveal]:hover {
+    /* Ne pas appliquer de changement de state */
+  }
+}

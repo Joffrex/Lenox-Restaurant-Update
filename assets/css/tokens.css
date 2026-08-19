@@ -1,0 +1,259 @@
+/**
+ * LENOX Restaurant-Bar — Design Tokens
+ * Couleurs en OKLCH uniquement, espacements sémantiques, typographie, motion
+ * Fichier unique source de vérité pour toutes les valeurs de design
+ */
+
+:root {
+  /* ============================================================
+     SCHÉMA DE COULEURS — Thème CLAIR (défaut absolu)
+     ============================================================ */
+  color-scheme: light;
+
+  /* --- Fonds et surfaces --- */
+  --bg:            oklch(97.5% 0.008 85);   /* crème — fond principal */
+  --surface:       oklch(99.2% 0.004 85);   /* blanc cassé — cartes, modales */
+  --surface-2:     oklch(94.5% 0.012 85);   /* zones alternées, bandes */
+  --surface-inset: oklch(92% 0.014 85);     /* champs de formulaire, creux */
+
+  /* --- Texte (encre) --- */
+  --ink:           oklch(23% 0.020 155);    /* titres, texte principal */
+  --ink-2:         oklch(43% 0.018 155);    /* texte secondaire */
+  --ink-3:         oklch(58% 0.014 155);    /* légendes, métadonnées */
+  --ink-on-brand:  oklch(97% 0.010 90);    /* texte sur fond --brand */
+
+  /* --- Marque : Vert Kirimiro (profond, engagement) --- */
+  --brand:         oklch(38% 0.060 155);
+  --brand-hover:   oklch(32% 0.062 155);
+  --brand-press:   oklch(28% 0.060 155);
+  --brand-soft:    oklch(93% 0.022 155);    /* fonds de puces, badges */
+  --brand-line:    oklch(84% 0.030 155);
+
+  /* --- Accent : Terre cuite de Gitega (rare, CTA) --- */
+  --accent:        oklch(64% 0.140 55);
+  --accent-hover:  oklch(58% 0.142 52);
+  --accent-soft:   oklch(94% 0.030 60);
+  --accent-ink:    oklch(30% 0.090 50);     /* texte lisible sur fond accent */
+
+  /* --- Bordures --- */
+  --line:          oklch(89% 0.012 85);
+  --line-strong:   oklch(80% 0.016 85);
+
+  /* --- Sémantique (états) --- */
+  --ok:            oklch(52% 0.110 155);
+  --warn:          oklch(70% 0.130 75);
+  --error:         oklch(52% 0.150 28);
+  --error-soft:    oklch(95% 0.030 28);
+
+  /* --- Élévation / Ombres (thème clair) --- */
+  --shadow-sm: 0 1px 2px oklch(23% 0.02 155 / 0.05);
+  --shadow-md: 0 4px 12px oklch(23% 0.02 155 / 0.07), 0 1px 2px oklch(23% 0.02 155 / 0.05);
+  --shadow-lg: 0 16px 40px oklch(23% 0.02 155 / 0.10), 0 2px 6px oklch(23% 0.02 155 / 0.06);
+
+  /* ============================================================
+     TYPOGRAPHIE
+     ============================================================ */
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-text:    "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+
+  /* Échelle modulaire fluide, ratio 1.333 */
+  --text-xs:   0.75rem;                                  /* 12px — légal, crédits */
+  --text-sm:   0.875rem;                                 /* 14px — métadonnées */
+  --text-base: 1rem;                                     /* 16px — plancher absolu */
+  --text-lg:   clamp(1.125rem, 0.6vw + 1rem, 1.3125rem); /* chapô */
+  --text-xl:   clamp(1.5rem, 1.2vw + 1.2rem, 2rem);      /* h3 */
+  --text-2xl:  clamp(2rem, 2.4vw + 1.4rem, 3rem);        /* h2 */
+  --text-3xl:  clamp(2.75rem, 5.5vw + 1rem, 5.5rem);     /* h1 hero */
+
+  --leading-tight: 1.05;
+  --leading-snug:  1.25;
+  --leading-body:  1.6;     /* rythme vertical de base : 16 × 1.6 = 25.6px */
+  --tracking-caps: 0.10em;  /* capitales espacées */
+  --tracking-display: -0.02em;
+
+  /* ============================================================
+     ESPACEMENTS, RAYONS, CONTENEURS
+     Base 4pt, nommage sémantique
+     ============================================================ */
+  --space-3xs: 0.25rem;   /* 4  */
+  --space-2xs: 0.5rem;    /* 8  */
+  --space-xs:  0.75rem;   /* 12 */
+  --space-sm:  1rem;      /* 16 */
+  --space-md:  1.5rem;    /* 24 */
+  --space-lg:  2rem;      /* 32 */
+  --space-xl:  3rem;      /* 48 */
+  --space-2xl: 4.5rem;    /* 72 */
+  --space-3xl: 7rem;      /* 112 */
+
+  /* Respiration verticale des sections */
+  --section-y: clamp(4.5rem, 9vw, 9rem);
+  /* Gouttière responsive */
+  --gutter:    clamp(1.25rem, 4vw, 3rem);
+
+  /* Largeurs de conteneur */
+  --width-content: 68ch;    /* colonnes de texte */
+  --width-page:    1240px;  /* conteneur standard */
+  --width-wide:    1520px;  /* galerie, hero, bande photo */
+
+  /* Rayons */
+  --radius-sm:  6px;
+  --radius-md:  12px;
+  --radius-lg:  20px;
+  --radius-pill: 999px;
+
+  /* ============================================================
+     MOTION / DURÉES / COURBES
+     ============================================================ */
+  --dur-instant: 120ms;  /* pression bouton, changement couleur */
+  --dur-fast:    220ms;  /* survols, tooltips */
+  --dur-base:    320ms;  /* ouverture menu, accordéon */
+  --dur-slow:    480ms;  /* modale, tiroir, lightbox */
+  --dur-reveal:  720ms;  /* apparitions au scroll */
+
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-out-expo:  cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out:    cubic-bezier(0.65, 0, 0.35, 1);
+
+  /* Transition standard au repos (un seul composite par élément) */
+  --transition-base: transform var(--dur-fast) var(--ease-out-quart),
+                     opacity var(--dur-fast) var(--ease-out-quart),
+                     background-color var(--dur-instant) linear,
+                     border-color var(--dur-instant) linear,
+                     color var(--dur-instant) linear,
+                     fill var(--dur-instant) linear;
+}
+
+/* ============================================================
+   THÈME SOMBRE — Profondeur par surfaces plus claires, pas ombres
+   ============================================================ */
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  /* --- Fonds et surfaces (plus clairs = plus "hauts") --- */
+  --bg:            oklch(16% 0.018 155);
+  --surface:       oklch(20% 0.020 155);
+  --surface-2:     oklch(24% 0.022 155);
+  --surface-inset: oklch(13% 0.016 155);
+
+  /* --- Texte --- */
+  --ink:           oklch(94% 0.008 88);
+  --ink-2:         oklch(78% 0.010 88);
+  --ink-3:         oklch(62% 0.012 88);
+  --ink-on-brand:  oklch(16% 0.018 155);
+
+  /* --- Marque (éclaircie, désaturée) --- */
+  --brand:         oklch(74% 0.085 155);
+  --brand-hover:   oklch(80% 0.080 155);
+  --brand-press:   oklch(68% 0.085 155);
+  --brand-soft:    oklch(28% 0.035 155);
+  --brand-line:    oklch(34% 0.040 155);
+
+  /* --- Accent (terre cuite adaptée sombre) --- */
+  --accent:        oklch(74% 0.115 58);
+  --accent-hover:  oklch(80% 0.105 60);
+  --accent-soft:   oklch(30% 0.045 55);
+  --accent-ink:    oklch(84% 0.100 60);
+
+  /* --- Bordures --- */
+  --line:          oklch(30% 0.020 155);
+  --line-strong:   oklch(38% 0.024 155);
+
+  /* --- Sémantique --- */
+  --ok:            oklch(72% 0.110 155);
+  --warn:          oklch(80% 0.110 78);
+  --error:         oklch(70% 0.130 28);
+  --error-soft:    oklch(28% 0.050 28);
+
+  /* --- Ombres quasi supprimées en sombre --- */
+  --shadow-sm: 0 1px 2px oklch(0% 0 0 / 0.30);
+  --shadow-md: 0 4px 14px oklch(0% 0 0 / 0.35);
+  --shadow-lg: 0 18px 44px oklch(0% 0 0 / 0.45);
+}
+
+/* ============================================================
+   TRANSITION DE BAScule DE THÈME (appliquée via .theme-transitioning sur <html>)
+   ============================================================ */
+.theme-transitioning,
+.theme-transitioning *,
+.theme-transitioning *::before,
+.theme-transitioning *::after {
+  transition: background-color 260ms var(--ease-out-quart),
+              border-color 260ms var(--ease-out-quart),
+              color 260ms var(--ease-out-quart),
+              fill 260ms var(--ease-out-quart) !important;
+}
+
+/* ============================================================
+   AJUSTEMENTS TYPOGRAPHIQUES THÈME SOMBRE
+   ============================================================ */
+[data-theme="dark"] {
+  /* Corps plus léger en sombre (paraît plus gras), micro-letter-spacing */
+  --font-weight-body: 380;
+  --letter-spacing-body: 0.01em;
+}
+
+[data-theme="light"] {
+  --font-weight-body: 400;
+  --letter-spacing-body: 0;
+}
+
+/* ============================================================
+   REDUCED MOTION — Respect global
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-instant: 0.01ms;
+    --dur-fast:    0.01ms;
+    --dur-base:    0.01ms;
+    --dur-slow:    0.01ms;
+    --dur-reveal:  0.01ms;
+  }
+
+  html {
+    scroll-behavior: auto !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ============================================================
+   SCROLL BEHAVIOR PAR DÉFAUT (surchargé par reduced-motion)
+   ============================================================ */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 108px; /* Header sticky 88px -> 68px, offset 108px */ /* hauteur header sticky + marge de sécurité */
+  scroll-snap-type: y normal; /* pas de snap, permet aux sections de se rallier naturellement */
+}
+
+/* ============================================================
+   SCROLL OFFSET — Header sticky (88px default, 68px scrolled)
+   ============================================================ */
+[data-header scrolled] .site-header {
+  scroll-margin-top: 68px;
+}
+
+/* ============================================================
+   SMOOTH SCROLL FOR ANCHOR LINKS — Offset handling
+   ============================================================ */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 112px; /* Header + safe area buffer */
+}
+
+/* Offset for sections to avoid header overlap */
+[id] {
+  scroll-margin-top: 112px;
+}
+
+/* Anchor links smooth scroll */
+a[href^="#"] {
+  scroll-margin-top: 112px;
+}
